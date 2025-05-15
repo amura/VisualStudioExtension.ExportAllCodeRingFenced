@@ -8,11 +8,11 @@ You provide the output file name that will be created in the workspace root. The
 
 For example if there is an app subfolder under your extension project workspace:
 
-![Export app code](media/Exportallfiles.mp4)
+![Export app code](media/Exportallfiles.gif)
 
 You can control what files or folders are excluded from the export under the settings. Some defaults are in place to exclude the node_modules and .git folders. You can add to this list in the settings.
 
-![Export all settings](media/ExportAllSettings.mp4)
+![Export all settings](media/ExportAllSettings.gif)
 
 
 ## Release Notes
