@@ -1,0 +1,62 @@
+{
+  "name": "exportallcoderingfenced",
+  "displayName": "ExportAllCodeRingFenced",
+  "description": "This extension will export all the code files to a single text file, with each code block ring fenced in tripple back ticks",
+  "version": "0.0.2",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "exportallcoderingfenced.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "exportallcoderingfenced.exportAllFiles",
+        "title": "Export All Files to Single Text File"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "ExportAllCodeRingFenced Configuration",
+      "properties": {
+        "exportallcoderingfenced.exclude": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["node_modules", ".git", "*.log", "*.svg"],
+          "description": "List of folder names, file names, or file extensions (use * for extension, e.g. *.log) to exclude from export."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/exportallcoderingfenced.git"
+  }
+}
